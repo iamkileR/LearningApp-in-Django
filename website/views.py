@@ -10,3 +10,6 @@ def about(request):
 
 def about1(request):
     return render(request, 'about1.html', {})
+
+def quiz(request):
+    return render(request, 'quiz.html', {})

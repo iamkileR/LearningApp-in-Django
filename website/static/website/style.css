@@ -1,4 +1,27 @@
-
 h1{
-    margin-left: 20px;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
 }
+h2{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+h3{
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+p{
+
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+}
+p.underline {
+    text-decoration: underline;
+}
+

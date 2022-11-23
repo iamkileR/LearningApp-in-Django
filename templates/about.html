@@ -1,5 +1,88 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Treść na temat Matematyki Dyskretnej</h1>
+    <h3><b>Zbiory i przestrzenie rzeczywiste</b></h3><br>
+
+    <p>
+        <b>Zbiór jest „kolekcją” obiektów.</b>
+        Definicja danego zbioru musi być jednoznaczna, to znaczy, że
+        musi być jasne, czy konkretny element należy do zbioru, czy też
+        nie.
+        W dalszej części wykładu zbiory będą oznaczane wielkimi literami
+        (np.: 𝐴, 𝐵, 𝐶). Obiekty (elementy zbiorów) będą oznaczane
+        małymi literami (np.: 𝑎, 𝑏, 𝑐).
+        W takim ujęciu obiekt 𝑎, który należy do zbioru 𝐵 jest nazywany
+        elementem zbioru 𝐵, co wyraża się zapisem:<br> 𝑎 ∈ 𝐵.
+        Zapis: 𝑎 ∉ 𝐵 oznacza, że obiekt 𝑎 nie jest elementem zbioru 𝐵.
+        <br>
+        Dwa zbiory 𝐴 i 𝐵 nazywa się równymi (zapis: 𝐴 = 𝐵), jeżeli:
+        𝑥 ∈ 𝐴 ⟺ 𝑥 ∈ 𝐵
+        Zbiór 𝐴 jest podzbiorem zbioru 𝐵 (zapis: 𝐴 ⊆ 𝐵), jeżeli każdy
+        element zbioru 𝐴 jest też elementem zbioru 𝐵.
+        np.:
+        2, 4, 6, 8, 10 = 10, 8, 6, 4, 2 = {2, 8, 2, 6, 2, 10, 4, 2}
+        Zbiór 𝐴 jest podzbiorem właściwym zbioru 𝐵 (zapis: 𝐴 ⊂ 𝐵),
+        jeżeli 𝐴 ⊆ 𝐵 oraz 𝐴 ≠ 𝐵.
+        <br>
+        <p class="underline">Niektóre zbiory szczególne:</p>
+        <p>
+        Zbiór liczb <b>naturalnych</b>:
+        ℕ = {0, 1, 2, 3, 4, 5, ... } <br>
+        Zbiór liczb <b>całkowitych dodatnich</b>:
+        ℙ = {1, 2, 3, 4, 5, ... } <br>
+        Zbiór liczb <b>całkowitych</b>:
+        ℤ = {..., -4 ,-3 ,-2 ,-1 ,0 ,1, 2, 3, 4, 5, ... } <br>
+        Zbiór liczb <b>wymiernych</b>:
+        ℚ = {𝑚 𝑛: 𝑚 ∈ ℤ, 𝑛 ∈ ℤ, 𝑛 ≠ 0} <br>
+        Zbiór liczb <b>rzeczywistych</b> (wszystkich liczb wymiernych i niewymiernych):
+        ℝ = {ℚ, {𝑚: 𝑚 ∉ ℚ}} <br> </p>
+
+        <p class="underline">Przedziały (szczególne podzbiory zbioru ℝ):</p>
+        <p>
+        Dla 𝑎, 𝑏 ∈ ℝ, gdzie: 𝑎 < 𝑏, określa się: <br>
+        𝑎, 𝑏 = {𝑥 ∈ ℝ: 𝑎 ≤ 𝑥 ≤ 𝑏}; (𝑎, 𝑏) = {𝑥 ∈ ℝ: 𝑎 < 𝑥 < 𝑏};<br>
+        [𝑎, 𝑏) = {𝑥 ∈ ℝ: 𝑎 ≤ 𝑥 < 𝑏}; (𝑎, 𝑏] = {𝑥 ∈ ℝ: 𝑎 < 𝑥 ≤ 𝑏};<br>
+        Przedziały postaci [𝑎, 𝑏] nazywa się przedziałami domkniętymi.
+        Przedziały postaci (𝑎, 𝑏) nazywa się przedziałami otwartymi.<br>
+        Zbiór, który nie posiada żadnych elementów jest nazywany
+        zbiorem pustym. Oznacza się go symbolem ∅.
+        Przyjmuje się, że ∅ jest podzbiorem każdego zbioru 𝑆, czyli
+        prawdziwe jest zdanie: „jeżeli 𝑥 ∈ ∅, to 𝑥 ∈ 𝑆”. <br><br>
+        Zbiory mogą być elementami innych zbiorów, np. zbiór {1,2},
+        {1,3}, {2}, {3} ma cztery elementy, będące również zbiorami.
+        Należy zwracać uwagę na oznaczenia.
+        Np. ∅ jest zbiorem nie posiadającym elementów, natomiast {∅}
+        jest zbiorem, posiadającym jeden element.
+        Zbiór wszystkich podzbiorów zbioru 𝑆 nazywa się zbiorem
+        potęgowym zbioru 𝑆 i oznacza symbolem 𝑃(𝑆) lub 2𝑆.
+        Przy tym zawsze zachodzą zależności: ∅ ∈ 𝑃 𝑆 oraz 𝑆 ∈ 𝑃(𝑆).<br>
+        Przykłady:<br>
+        <b>a)</b> 𝑃 ∅ = {∅}
+        <b>b)</b> Jeżeli 𝑆 = {𝑎}, to 𝑃 𝑆 = {∅, 𝑎 }
+        <b>c)</b> Jeżeli 𝑆 = {𝑎, 𝑏, 𝑐},
+        to 𝑃 𝑆 = {∅, 𝑎 , 𝑏 , 𝑐 , 𝑎, 𝑏 , 𝑎, 𝑐 , 𝑏, 𝑐 , {𝑎, 𝑏, 𝑐}}<br>
+        Liczba elementów zbioru 𝑆 nazywana jest mocą zbioru 𝑆 . Oznacza się ją jako 𝑆 lub 𝑐𝑎𝑟𝑑(𝑆).
+        Jeżeli 𝑆 jest zbiorem skończonym (o skończonej liczbie elementów), zawierającym 𝑛 elementów, to 𝑃(𝑆) zawiera 2𝑛 elementów.
+        Jeżeli 𝑆 jest zbiorem nieskończonym, to 𝑃(𝑆) jest również zbiorem nieskończonym.
+        Wprowadźmy funkcję … liczby elementów zbioru, czyli 𝐴 oznacza liczbę elementów zbioru 𝐴.
+        𝐴 = 𝐵 wtedy, gdy 𝐴 i 𝐵 są tej samej wielkości. W szczególności ∅ = 0 oraz 1,2, … , 𝑛 = 𝑛.
+        Można wykazać, że 𝑃(𝑆) = 2 𝑆 , stąd bierze się określenie 𝑃(𝑆) jako „zbioru potęgowego”.
+        <p class="underline">Alfabet</p>
+        <p>
+        <b>Alfabet</b> jest to skończony zbiór niepusty 𝛴, którego elementami
+        są symbole, nazywane <b>literami</b>.
+        Dowolny skończony ciąg liter alfabetu 𝛴 nazywa się <b>słowem</b>.
+        Zbiór wszystkich słów, zbudowanych z liter alfabetu 𝛴 oznacza się
+        jako 𝛴∗.
+        Dowolny podzbiór zbioru 𝛴∗ nazywa się <b> językiem </b>nad alfabetem
+        𝛴.
+        Szczególnym elementem zbioru 𝛴∗ jest <b>słowo puste </b> – 𝜆. Jest ono
+        zawsze elementem zbioru 𝛴∗.
+        Np. jeżeli 𝛴 = {𝑎, 𝑏}, to 𝛴∗ = {𝜆, 𝑎, 𝑏, 𝑎𝑎, 𝑎𝑏, 𝑏𝑎, 𝑏𝑏, 𝑎𝑎𝑎, … }
+        <b>Nie jest dopuszczalne</b>, aby zbiór 𝛴 zawierał litery, które same są
+        ciągami liter, rozpoczynających się od litery, należącej do 𝛴 (np.
+        {𝑎, 𝑎𝑏, 𝑐}).
+
+        </p>
+    </p>
 {% endblock %}
