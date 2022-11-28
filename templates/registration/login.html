@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Logowanie{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{% if not request.user.is_authenticated %}
+<div class="login">
+    <h3>Zaloguj się!</h3>
+
+    <form method="POST" action="" class="form-group">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <br>
+        Don't have an account? Create one <a href="/register">here</a> !<br>
+        <button type="submit" class="btn btn-success">Login</button>
+
+    </form>
+</div>
+{% else %}
+<p>You're already logged in! Would you like to <a href="/logout">logout</a></p>
+{% endif %}
+{% endblock %}
