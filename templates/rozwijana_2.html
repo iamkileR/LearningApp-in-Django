@@ -1,12 +1,78 @@
 {% extends 'base.html' %}
 {% block title %}Układy równań liniowych{% endblock %}
-
+{% load static %}
 {% block content %}
 
 <body>
 
-    <h3>TEXT</h3>
+<h3><b>Równania liniowe</b></h3><br>
+<p class="underline">Metody bezpośrednie rozwiązywania układów równań liniowych</p>
+<p>
+    Niech dany będzie układ równań liniowych: A*x=b<br>
+    gdzie:<br><br>
+    <img src="{%  static "img/liniowe/1.png" %}"><br><br>
+    Metodą bezpośrednią (dokładną) nazywamy taką metodę rozwiązywania układów, że przy założeniu dokładnie
+    wykonywanych działań arytmetycznych po skończonej liczbie działań arytmetycznych wyznaczników otrzymujemy
+    rozwiązanie.<br><br>
 
+    <b>Metoda Cramera</b><br>
+    Jedną ze znanych dokładnych metod rozwiązywania układu jest metoda wyznaczników Cramera. Opiszemy tę metode
+    dla róznych n.<br>
+    <b>1. Dla n=2 układ można przedstawić w postaci:</b><br><br>
+    <img src="{%  static "img/liniowe/2.png" %}"><br><br>
+    gdzie:<br><br>
+    <img src="{%  static "img/liniowe/3.png" %}"><br><br>
+    <img src="{%  static "img/liniowe/4.png" %}"><br><br>
+    Liczymy wyznacznik powyższego układu: <br><br>
+    <img src="{%  static "img/liniowe/5.png" %}"><br><br>
+    Jeżeli Δ0 != 0, to dany układ ma jedno rozwiązanie. Zespół liczb niewiadomych x1x2 stanowiących rozwiązanie
+    układu równań wyznacza się za pomocą wzorów Cramera:<br><br>
+    <img src="{%  static "img/liniowe/6.png" %}"><br><br>
+    <img src="{%  static "img/liniowe/7.png" %}"><br><br>
+    <b>2. Dla dowolnego n równań liniowych o n niewiadomych:</b><br><br>
+    <img src="{%  static "img/liniowe/8.png" %}"><br><br>
+    gdzie:<br><br>
+    <img src="{%  static "img/liniowe/9.png" %}"><br><br>
+    Tworzymy wyznacznik Δ0 dla macierzy A ze współczynników przy niewiadomych x1,x2,...,xn: <br><br>
+    <img src="{%  static "img/liniowe/10.png" %}"><br><br>
+    Zastępujące w wyznaczniku Δ0 kolejno pierwszą, drugą, ..., ostatnią kolumnę kolumną wyrazów wolnych
+    otrzymamy n wyznaczników Δ1, Δ2, ...,Δn : <br><br>
+    <img src="{%  static "img/liniowe/11.png" %}"><br><br>
+    Mogą wystąpić trzy przypadki:<br><br>
+    <b>a)</b> Δ0 != 0<br>
+    Jeżeli wyznacznik główny Δ0 układu równań nie jest równy zeru, to układ n równań liniowych z tą samą liczbą
+    niewiadomych ma dokładnie jedno rozwiązanie i jest <i>układem ozaczonym</i>:<br><br>
+    <img src="{%  static "img/liniowe/12.png" %}"><br><br>
+    <b>b)</b> Δ0 = 0<br>
+    Jednak nie wszystkie wyznaczniki Δ1, Δ2, Δ1 jednocześnie są równe zeru. Układ jest <i>układem sprzecznym</i>.
+    <br><br><b>c)</b> Δ0 = 0, Δ1 = Δ2 = ... =  Δn = 0<br>
+    W tym przypadku przynajmniej jedno z równań układu jest kombinacją liniową pozostałych równań. Układ taki
+    może być <i>sprzeczny</i> lub <i>nieoznaczony</i>.<br><br>
+
+    <b>Metoda eliminacji Gaussa</b><br>
+    Metodą dokładną jest także metoda eliminacji Gaussa i jej uogólnienie z wyborem elementu głównego. Metoda
+    Gaussa polega na następującym postępowaniu. Przyrównując współczynniki jednej z niewiadomych możemy tę niewiadomą
+    wyłączyć ze wszystkich równań oprócz jednego. W ten sposób układ n równań o n niewiadomych sprowadza się
+    do jednego równania o n niewiadomych i n-1 równań o n-1 niewiadomych. W taki sposób budujemy układ równań
+    trójkątny . Poniżej opiszemy dokładnieij tę metodę.<br>
+    Niech dany będzie układ równań A(1)x = b(1) w postaci: <br><br>
+    <img src="{%  static "img/liniowe/13.png" %}"><br><br>
+    Odejmując od i-tego wiersza tego układu i = 2,3...n, pierwszy wiersz pomnożony przez ai1(1) / a11(1)
+    otrzymujemy układ A(2)x = b(2) postaci: <br><br>
+    <img src="{%  static "img/liniowe/14.png" %}"><br><br>
+    Tym samym nie ma już niewiadomej x1 w równaniach leżących w wierszach o numerach i = 2,3,...,n. Podobnie
+    eliminujemy x2 z równań leżących w wierszach  o numerach 3,4,...,n, odejmując od i-tego wiersza (i = 3,4,....,n)
+    wiersz drugi pomnożony przez a12(2) / a22(2). Postępując dalej podobnie  otrzymamy kolejne , przekształcone
+    układy równań A(3)x = b(3), A(4)x = b(4), ...., i po n-1 eliminacjach otrzymamy trójkątny układ równań
+    A(n)x = b(n) postaci: <br><br>
+    <img src="{%  static "img/liniowe/15.png" %}"><br><br>
+    Wychodząc z ostatniego równania i rozwiązując kolejne równania wyznaczające współrzędne wektora X w kolejności
+    odwrotnej za pomocą wzorów: <br><br>
+    <img src="{%  static "img/liniowe/15.png" %}"><br><br>
+    Można ocenić, że liczba wykonywanych działań metodą eliminacji Gaussa jest rzędu n^3.
+</p>
+
+<a href="#" class="scrollToTop">Do góry</a>
 </body>
 
 
