@@ -6,11 +6,23 @@ from .forms import RegisterForm
 def index(request):
     return render(request, 'index.html',{})
 
-def about(request):
-    return render(request, 'about.html',{})
+def rozwijana_1(request):
+    return render(request, 'rozwijana_1.html',{})
 
-def about1(request):
-    return render(request, 'about1.html', {})
+def rozwijana_2(request):
+    return render(request, 'rozwijana_2.html',{})
+
+def menu_aproksymacja(request):
+    return render(request, 'menu_aproksymacja.html',{})
+
+def menu_interpolacja(request):
+    return render(request, 'menu_interpolacja.html', {})
+
+def menu_rozniczkowanie(request):
+    return render(request, 'menu_rozniczkowanie.html', {})
+
+def menu_calkowanie(request):
+    return render(request, 'menu_calkowanie.html', {})
 
 def quiz(request):
     return render(request, 'quiz.html', {})

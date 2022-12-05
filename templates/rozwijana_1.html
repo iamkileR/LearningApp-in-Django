@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}Równania nieliniowe{% endblock %}
+{% load static %}
+{% block content %}
+
+<body>
+
+<h3><b>Równania nieliniowe</b></h3><br>
+<p class="underline">Pierwiastki równania nieliniowego</p>
+<p>
+    Równania algebraiczne moga byc przedstawione w różny sposób. Jednym z nich jest równość
+    dwóch funkcji jednej i tej samej zmiennej: F(x) = f(x), będziemy nazywać <i>równaniem
+    algebraicznym</i> , jeżeli obie wystepujące w nim funkcje są funkcjami algebraicznymi (wymiernymi lub
+    niewymiernymi), przy czym jedna z tych funkcji może być być stała ( na przykład równa zeru), gdzie:
+    <br><br><img src="{%  static "img/nieliniowe/1.png" %}">,   f(x) = 0. <br><br>
+    Przedstawimy kilka określeń pierwiastków i typów równań. Jeżeli przy pewnej wartości x = x1 równość
+    F(x) = f(x) jest prawdziwa, to mówimy, że liczba x1 spełnia równanie i nazywamy ją <i>pierwiastkiem
+    </i> tego równania. Równanie może mieć wiele pierwiastków: { x1,x2, ..., xn }. Rozwiązać równanie
+    zanczy znaleźć wszystkie jego pierwiastki. Może się okazać, że równanie wcale nie ma pierwiastków
+    rzeczywistych. Jeżeli równanie jest spełnione dla wszystkich wartości zmiennej x, przy których obie
+    funkcje F(x) i f(x) mają sens liczbowy, to równanie nazywamy <i>tożsamością</i>. Dwa równania  nazywamy
+    równoznacznymi, jeżeli mają wszystkie pierwiastki te same.
+</p>
+<p class="underline">Metody znajdowania pierwiastków równań nieliniowych</p>
+<p><img src="{%  static "img/nieliniowe/2.png" %}" width="500" height="300"><br></p>
+<p>
+    <b>Metoda połowienia (bisekcja)</b><br>
+    Aby znaleźć pierwiastek dzielimy przedział [a,b] na połowy punktem x1 = b+a / 2. Jeżeli F(x1) = 0,
+    to x1 jest szukanym pierwiastkiem, jeżeli natomiast F(x1) ≠ 0, to  z otrzymanych dwóch przedziałow
+    [a,x1] i [x1,b] wybieramy ten, na końcach  którego funkcja F(x) ma przeciwne znaki. Dalej ten przedział
+    dzielimy na dwie połowy, ponownie badamy wartosć funkcji F(x) w punkcie x2 i znaki funkcji F(x)
+    na końcach otrzymanych przedziałów itd. W wyniku takieg postępowania po pewnej liczbie kroków albo
+    otrzymamy pierwiastek dokładny F(xn) = 0, albo ciąg przedziałów takich, że F(xi)F(xi+1) < 0,
+    przy czym xi oraz xi+1 są odpowiednio początkiem i końcem i-tego przedziału, a jego długość:<br><br>
+    <img src="{%  static "img/nieliniowe/3.png" %}"><br><br>
+    Dowolny punkt z przedziału [xi, xi+1], (i = 1,2, ...) może być wybrany za pierwiastek równania. Przy
+    czym długość przedziału [xi,xi+1] może być wybrana wcześniej. Zaletą metody połowienia jest zarówno
+    jej prostota, jak i pewność, że w jej wyniku otrzymamy rozwiązanie z żądaną dokładnością.<br><br>
+
+    <b>Metoda cięciw</b><br>
+    <img src="{%  static "img/nieliniowe/4.png" %}" width="500" height="300"><br><br>
+    Metoda cięciw (lub metoda falsi) polega na tym, że za przybliżoną wartość pierwiastka zawartego
+    w tym przedziale przyjmujemy odciętą punktu przecięcia cięciwy AB z osią Ox.<br>
+    Równanie cięciwy AB, jako prostej przechodzącej przez punkt A(a,F(a)) i B(b,F(b)), ma postać:<br><br>
+    y-F(a) = (F(b)-F(a) / b-a) * (x-a)<br><br>
+    Podstawiając y=0 otrzymujemy odciętą x1 punktu przecięcia cięciwy AB z osią Ox:<br><br>
+    x1 = a - F(a) * ((b-a) / (F(b)-F(a))<br><br>
+    Jest to przybliżona wartość pierwiastka równania. W taki sam sposób możemy znaleźć dalsze przybliżenia
+    x2,x3,..., xn poszukiwanego pierwiastka ξ równania. Aby ocenić błąd otrzymanego przybliżenia, tzn.
+    wartość bezwzględną różnicy pomiędzy przybliżoną wartością pierwiastka xn, a dokładną wartością ξ pierwiastka
+    , stosujemy wzrór:<br><br>
+    <img src="{%  static "img/nieliniowe/5.png" %}" ><br><br>
+    w którym k onzacza kres dolny bezwględnej wartości pochodnej F'(x) w rozpatrywanym przedziale.<br><br>
+
+    <b>Metoda stycznych (Newtona)</b><br>
+    <img src="{%  static "img/nieliniowe/6.png" %}" width="500" height="300"><br><br>
+    Przyjmujemy, że funkcja y=f(x) ma pierwszą i drugą pochodną różną od zera w przedziale [a,b]. Zamiast
+    cięciwy jak w metodzie regula falsi prowadzimy styczną do krzywej w jednym z końcowych punktów przedziału
+    i za przyblizoną wartość pierwiastka przyjmujemy odciętą x1 punktu, w którym styczna w końcu łuku przecina
+    oś Ox. Styczną wyprowadzamy z tego końca łuku, w którym druga pochodna jest tego samego znaku co funkcja.<br>
+    Styczną prowadzimy z punktu B, ponieważ łuk AB jest wypukły, czyli F''(x)>0, równanie stycznej ma postać:<br><br>
+    y-F(b) = F'(b)(x-b) <br><br>
+    Przyjmując y=0, otrzymamy: <br><br>
+    <img src="{%  static "img/nieliniowe/7.png" %}" ><br><br>
+    Z twierdzenia Lagrange'a mamy: <br><br>
+    F(x1)-F(α) = F'(c1)(x1 - α) <br><br>
+    Przy czym c1 należy do (α,x1). Ponieważ F(α)=0 i F'(c1)>0, więc F(x1)>0, a stąd wynika, że styczna poprowadzona
+    w punkcie B1(x1, F(x1)) ma identyczne własności co styczna poprowadzona w punkcie B. Z równania drugiej
+    stycznej: <br><br>
+    y-F(x1) = F'(x1)(x-x1)<br><br>
+    otrzymamy:<br><br>
+    <img src="{%  static "img/nieliniowe/8.png" %}" ><br><br>
+    <img src="{%  static "img/nieliniowe/9.png" %}" width="500" height="300"><br><br>
+    Ogólne równanie stycznej w punkcie Bn(xn,F(xn)), n=1,2,... ma postać: <br><br>
+    y-F(xn) = F'(xn)(x-xn) <br><br>
+    a stąd wzór rekurencyjny opisujący kolejne wyrazy ciągu przybliżeń metody Newtona ma postać: <br><br>
+    <img src="{%  static "img/nieliniowe/10.png" %}" ><br><br>
+    gdzie: <br><br>
+    F'(x) ≠ 0
+</p>
+
+<a href="#" class="scrollToTop">Do góry</a>
+</body>
+
+
+{% endblock %}
