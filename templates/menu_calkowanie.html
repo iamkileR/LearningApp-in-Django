@@ -1,12 +1,105 @@
 {% extends 'base.html' %}
 {% block title %}Całkowanie numeryczne{% endblock %}
-
+{% load static %}
 {% block content %}
 
 <body>
 
-    <h3>TEXT</h3>
-
+<h3><b>Całkowanie numeryczne</b></h3><br>
+<p>
+    Sens całkowania ukrywa się w samej jego nazwie: całkowanie czyli budowanie całości –sumowanie.
+    Całka ma bardzo prostą interpretację geometryczną: jest to pole zawarte pomiędzy osią OX, a wykresem
+    funkcji. Wyobraźmy sobie, że możemy dowolnie drobno podzielić odcinek [a,b] na podprzedziały.
+    Wówczas suma iloczynów długości przedziału i wartości funkcji podcałkowej w tym przedziale będzie
+    całką, jeżeli dalsze zagęszczanie podziału nie będzie już wpływało na wartość sumy.<br>
+    Całkowanie może być narzędziem służącym do analizy procesów fizycznych:<br>
+    <ul style="text-align: left; margin-left: 10%; margin-right: 10%; width: 80%;">
+        <li>praca zdefiniowana jest całką</li>
+        <li>mając dystrybucję pewnego parametru możemy znaleźć jego ilość w ośrodku (ziarna, cząstki, gęstość materii, itp. ... )</li>
+        <li>poszukiwanie środków ciężkości figur</li>
+        <li>pomiar długości toru ruchu</li>
+        <li>oraz wiele innych</li>
+    </ul>
+</p>
+<p>
+    Metody całkowania numerycznego:<br>
+    <ul style="text-align: left; margin-left: 10%; margin-right: 10%; width: 80%;">
+        <li>Metoda prostokątów</li>
+            <ul>
+                <li>Z nadmiarem</li>
+                <li>Z niedomiarem</li>
+            </ul>
+        <li>Metoda trapezów</li>
+        <li>Metoda parabol (Simpsona)</li>
+        <li>Metoda Monte Carlo *</li>
+    </ul>
+</p>
+<p>
+    <b>Metoda prostokątów</b> polega na przybliżeniu obszaru ograniczonego wykresem funkcji przez prostokąty o podstawie równej długości
+    kroku całkowania i wysokości równej wartości funkcji w przedziale określonym przez krok całkowania.<br><br>
+    <img style="margin-left: 20%" src="{%  static "img/calkowanie/1.PNG" %}">
+    <br><br>
+    Wzór prostokątów z niedomiarem: <img src="{%  static "img/calkowanie/2.PNG" %}"><br>
+    Wzór prostokątów z nadmiarem: <img src="{%  static "img/calkowanie/3.PNG" %}"><br><br>
+</p>
+<p class="underline"><b>Przykład</b></p>
+<p>
+    Obliczyć wartość całki, korzystając ze wzoru prostokątów:<br>
+    <img src="{%  static "img/calkowanie/4.PNG" %}"><br>
+    <img src="{%  static "img/calkowanie/5.PNG" %}"><br>
+    Ilość podprzedziałów: <b>n=4</b><br><br>
+    Krok całkowania: <img src="{%  static "img/calkowanie/6.PNG" %}"><br>
+    Obliczyć wartość xi oraz yi:<br>
+    <ul style="text-align: left; margin-left: 10%; margin-right: 10%; width: 80%;">
+        <li>a=1</li>
+        <li>b=5</li>
+        <li>h=1</li>
+        <li>f(x)=(x2+3x+2)</li>
+    </ul>
+</p>
+<p>
+    <img src="{%  static "img/calkowanie/7.PNG" %}"><br><br>
+    Wzór prostokątów z niedomiarem: <img src="{%  static "img/calkowanie/8.PNG" %}"><br>
+    Wzór prostokątów z nadmiarem: <img src="{%  static "img/calkowanie/9.PNG" %}"><br><br>
+    <hr>
+</p>
+<p>
+    <b>Metoda trapezów </b> polega na przybliżeniu obszaru ograniczonego wykresem
+    funkcji przez trapezy prostokątne o wysokości równej długości kroku
+    całkowania i podstawach o długościach odpowiadających wartościom funkcji w
+    punktach węzłowych na brzegu przedziału.<br>
+    <img style="margin-left: 20%" src="{%  static "img/calkowanie/15.PNG" %}">
+    <br><br>
+    Wzór na metodę trapezów: <img src="{%  static "img/calkowanie/10.PNG" %}"><br>
+    <p class="underline"><b>Przykład</b></p>
+</p>
+<p>
+    Obliczyć wartość całki z poprzedniego przykładu, korzystając ze wzoru trapezów:<br>
+    <img src="{%  static "img/calkowanie/11.PNG" %}"><br>
+    Przedział całkowania jak w poprzednim przykładzie podzielony jest na 4 części.
+    Punkty (xi, yi) są takie same jak w poprzednim przykładzie.
+    <br>
+    <img src="{%  static "img/calkowanie/12.PNG" %}">
+    <img src="{%  static "img/calkowanie/14.PNG" %}">
+    <hr>
+</p>
+<p>
+    <b>Metoda parabol (Simpsona)</b> polega na przybliżeniu pola pod krzywą polami figur płaskich budowanych w następujący sposób: podobnie jak dla trapezów
+    podstawą jest podprzedział całkowania, bokami są wartości funkcji całkowanej w punktach brzegowych,czwarty bok jest opisany parabolą rozpiętą na
+    wartościach funkcji całkowanej w punkcie środka przedziału całkowania oraz punktów brzegowych.<br><br>
+    <img style="margin-left: 30%" src="{%  static "img/calkowanie/16.PNG" %}">
+    <br><br>
+    Wzór Simspona: <img src="{%  static "img/calkowanie/17.PNG" %}"><br>
+    <p class="underline"><b>Przykład</b></p>
+</p>
+<p>
+    Obliczyć wartość całki z poprzednich przykładów, korzystając ze wzoru Simpsona:<br>
+    <img src="{%  static "img/calkowanie/18.PNG" %}"><br><br>
+    <img src="{%  static "img/calkowanie/22.PNG" %}">
+    <img src="{%  static "img/calkowanie/20.PNG" %}">
+    <img src="{%  static "img/calkowanie/21.PNG" %}">
+</p>
+<a href="#" class="scrollToTop">Do góry</a>
 </body>
 
 

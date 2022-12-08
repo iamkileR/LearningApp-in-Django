@@ -1,7 +1,7 @@
 .container{
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
+  margin-left: 15%;
+  text-align: left;
+
 }
 
 {
@@ -17,7 +17,7 @@ p.question {
   font-size:20px;
   color: #2E2E2E;
   margin-bottom:0px;
-  text-align: center;
+  text-align: left;
 }
 
 h2.quizHeader {
@@ -34,7 +34,7 @@ h2.quizHeader {
 h2.quizScore{
   font-family: Arial, sans-serif;
   font-size:25px;
-  text-align: center;
+  text-align: left;
 }
 
 div.quizAnswers{
@@ -42,7 +42,7 @@ div.quizAnswers{
   font-size:16px;
   color: #424242;
   padding: 4px 0 4px 0;
-  text-align: center;
+  text-align: left;
 }
 
 label {
@@ -50,12 +50,13 @@ label {
   font-size:14px;
   color: #424242;
   vertical-align:top;
-  text-align: center;
+  text-align: left;
 }
 
 input.answer[type="radio"] {
   margin-bottom: 10px;
-  text-align: center;
+  text-align: left;
+  margin-left: 35px;
 }
 
 input.quizSubmit[type="submit"] {
@@ -74,10 +75,12 @@ input.quizSubmit[type="submit"] {
   outline: 0;
   text-transform:uppercase;
   height:35px;
-  width:85px;
+  width:200px;
   border: 1px solid #5E5E5E;
   border-radius:5px;
   text-align: center;
+  position: center;
+
  }
 
 input.quizSubmit[type="submit"]:hover {
@@ -85,6 +88,7 @@ input.quizSubmit[type="submit"]:hover {
   background: #680f11;
   text-decoration: none;
   text-align: center;
+
 }
 
 table {
@@ -94,19 +98,23 @@ table {
   padding:10px;
   padding-left:25px;
   box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 1px 0px;
+  text-align: left;
 
 }
 
 th {
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
 }
 
 tr {
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
 }
 
 td {
-  text-align: center;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .submitter {

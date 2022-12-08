@@ -54,10 +54,10 @@
 		}
 
 	// show score as "score/possible score"
-		var showScore = "Your Score: " + calcScore +"/" + questionCounter;
+		var showScore = "Twój wynik: " + calcScore +"/" + questionCounter;
 	// if 4/4, "perfect score!"
 		if (calcScore === questionCounter) {
-			showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+			showScore = showScore + "&nbsp; <strong>Świetny wynik!</strong>"
 		};
 		document.getElementById('userScore').innerHTML = showScore;
 	}
