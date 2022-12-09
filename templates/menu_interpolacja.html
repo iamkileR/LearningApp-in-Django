@@ -1,6 +1,46 @@
 {% extends 'base.html' %}
 {% block title %}Interpolacja{% endblock %}
-
+{% load static %}
 {% block content %}
-<h1>Treść przykładowa</h1>
+
+<h3><b>Interpolacja</b></h3><br>
+
+<p>
+    <b>Interpolacja</b> – metoda numeryczna polegająca na budowaniu w danym obszarze tzw. funkcji interpolacyjnej,
+    która przyjmuje w nim z góry zadane wartości w ustalonych punktach nazywanych węzłami. Stosowana
+    jest zarówno w methodic numerycznych (np. przy obliczaniu całek ze skomplikowanych funkcji),
+    jak i w naukach doświadczalnych przy budowaniu funkcji na podstawie danych pomiarowych w
+    skończonej liczbie punktów (np. w meteorologii przy sporządzaniu map synoptycznych).<br><br>
+    <img style="margin-left: 32%" src="{%  static "img/interpolacja/1.PNG" %}"><br><br>
+    Interpolacja wielomianowa polega na przybliżaniu funkcji za pomocą wielomianów. Metoda
+    ta została rozwinięta przez Josepha Lagrange’a, a jej podstawą jest twierdzenie, że:
+    Dla danych punktów pomiarowych, parami różnych od siebie, istnieje jedyny wielomian
+    interpolujący stopnia co najwyżej zbudowany na tych punktach.<br><br>
+
+    Wzór interpolacyjny Lagrange'a:
+    <img src="{%  static "img/interpolacja/2.PNG" %}">
+    <img src="{%  static "img/interpolacja/3.PNG" %}">
+    <img src="{%  static "img/interpolacja/4.PNG" %}">
+</p>
+<p class="underline"><b>Przykład</b></p>
+<p>
+    Znaleźć wielomian interpolacyjny Lagrange'a dla x = -2,1,2,4 oraz y = 3,1,-3,8:<br><br>
+    <img src="{%  static "img/interpolacja/5.PNG" %}"><br><br>
+
+    <b>Interpolacja Newtona</b><br>
+    Wzór interpolacyjny Newtona jest bardziej praktyczniejszy w przypadku gdy zmienia się
+    liczba węzłów. Wzór interpolacyjny Newtona dla równoodległych węzłów:<br><br>
+    <img src="{%  static "img/interpolacja/6.PNG" %}">
+    <img src="{%  static "img/interpolacja/7.PNG" %}">
+</p>
+<p class="underline"><b>Przykład</b></p>
+<p>
+    Znaleźć wielomian interpolacyjny Newtona dla x = 1, 1.5, 2, 2.5 oraz y = 2, 2.5, 3.5, 4 :<br><br>
+    Tablica różnic zwykłych: <br>
+    <img src="{%  static "img/interpolacja/8.PNG" %}"><br><br>
+    <img src="{%  static "img/interpolacja/9.PNG" %}">
+    <img src="{%  static "img/interpolacja/10.PNG" %}">
+
+</p>
+<a href="#" class="scrollToTop">Do góry</a>
 {% endblock %}
