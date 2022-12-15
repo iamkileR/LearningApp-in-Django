@@ -11,9 +11,6 @@
 <div class="container">
   <h2 class="quizHeader">Moduł Quizu</h2>
 
-	<table style="width: 1300px">
-	<tr>
-	  <td>
 	  	<div>
 	  		<p class="question">1. Zbiór jest ... obiektów</p><br>
 
@@ -31,8 +28,6 @@
 	        <label>krotką</label>
     		</ul>
 	  	</div>
-	  </td>
-	  <td>
 	  	<div>
 	  		<p class="question">2. Pytanie 2</p><br>
 
@@ -50,10 +45,6 @@
 	        <label>wrong answer</label>
 	    	</ul>
 	  	</div>
-	  </td>
-	</tr>
-	<tr>
-	  <td>
 	  	<div>
 	  		<p class="question">3. Pytanie 3</p><br>
 
@@ -71,8 +62,6 @@
 	        <label>wrong answer</label>
 	    	</ul>
 		</div>
-	  </td>
-	  <td>
 	  	<div>
 	  		<p class="question">4. Pytanie 4</p><br>
 
@@ -90,26 +79,133 @@
 	        <label>wrong answer</label>
     		</ul>
 	  	</div>
-	  </td>
-	</tr>
-	</table>
+	  	<div>
+	  		<p class="question">5. Pytanie 5</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="1">
+	        <label id="correctString5">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">6. Pytanie 6</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="1">
+	        <label id="correctString6">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">7. Pytanie 7</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q7" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q7" value="1">
+	        <label id="correctString7">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q7" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q7" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">8. Pytanie 8</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q8" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q8" value="1">
+	        <label id="correctString8">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q8" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q8" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">9. Pytanie 9</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q9" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q9" value="1">
+	        <label id="correctString9">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q9" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q9" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">10. Pytanie 10</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q10" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q10" value="1">
+	        <label id="correctString10">correct answer 4</label>
+	        <br>
+	        <input class="answer" type="radio" name="q10" value="0">
+	        <label>wrong answer</label>
+	        <br>
+	        <input class="answer" type="radio" name="q10" value="0">
+	        <label>wrong answer</label>
+    		</ul>
+	  	</div>
+
 <br/>
   <div class="submitter">
           <input class="quizSubmit" id="submitButton" onClick="submitQuiz()"
           type="submit" value="Potwierdź odpowiedzi" />
-    </div>
+    </div><br>
 
 <!--show only wrong answers on submit-->
     <div class="quizAnswers" id="correctAnswer1"></div>
     <div class="quizAnswers" id="correctAnswer2"></div>
     <div class="quizAnswers" id="correctAnswer3"></div>
     <div class="quizAnswers" id="correctAnswer4"></div>
+    <div class="quizAnswers" id="correctAnswer5"></div>
+    <div class="quizAnswers" id="correctAnswer6"></div>
+    <div class="quizAnswers" id="correctAnswer7"></div>
+    <div class="quizAnswers" id="correctAnswer8"></div>
+    <div class="quizAnswers" id="correctAnswer9"></div>
+    <div class="quizAnswers" id="correctAnswer10"></div><br>
 
 <!--show score upon submit-->
     <div>
-    	<h2 class="quizScore" id="userScore"></h2>
+        <h2 class="quizScore" id="userScore"></h2>
     </div>
-	</div>
+    <br>
+
 </div>
 </body>
 </html>
