@@ -80,7 +80,7 @@ input.quizSubmit[type="submit"] {
   height:35px;
   width:200px;
   border: 1px solid #5E5E5E;
-  border-radius:5px;
+  border-radius: 15px;
   text-align: center;
   position: center;
   margin-left: 140px;
@@ -93,6 +93,25 @@ input.quizSubmit[type="submit"]:hover {
   text-decoration: none;
   text-align: center;
 
+}
+
+input.refresher{
+
+  padding: 5px 25px;
+  margin-left: 500px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  text-transform:uppercase;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+  border: 1px solid #5E5E5E;
 }
 
 .submitter {
