@@ -12,72 +12,28 @@
     interpolującą. Następnie jako wartość przyblizoną f'(x0) przyjmuje się f~'(x0). Najlepiej w tym przypadku
     skorzystać ze wzoru interpolacyjnego Lagrange'a.
     <br>
-    Niech będą dane zbiory węzłów:
-    <br>
-    {x0,x1,...,xn}
-    <br>
-    i wartośći funkcji:
-    <br><br>
-    <img src="{%  static "img/rozniczka/1.PNG" %}">
-    <br><br>
-    wtedy wielomian interpolacyjny Lagrange'a Ln(x) z równooddalonymi węzłami przyjmie postać:
-    <br><br>
-    <img src="{%  static "img/rozniczka/2.PNG" %}">
-    <br><br>
-    Niech:<br>
-    Xk = X0 + k * h, h > 0, k= 0,1,...,n
-    <br>
-    i zapiszemy wzorem:
-    <br><br>
-    <img src="{%  static "img/rozniczka/3.PNG" %}" height="120">
-    <br><br>
-    Oznaczając
-    <br><br>
-    <img src="{%  static "img/rozniczka/4.PNG" %}" height="70">
-    <br><br>
-    otrzymujemy
-    <br><br>
-    <img src="{%  static "img/rozniczka/5.PNG" %}" width="500">
-    <br><br>
-    Wtedy dla funkcji f(x) w dowolnym punkcie x należy [a,b] można zapisać f(x) ~~ Ln(x).
-    Różniczkując obie strony otrzymujemy wzór na różniczkowanie numeryczne z węzłami równooddalonymi:
-    <br><br>
-    <img src="{%  static "img/rozniczka/6.PNG" %}" width="500">
-    <br><br>
-    Jeżeli n jest parzyste, n = 2s i m = s, wtedy:
-    <br><br>
-    <img src="{%  static "img/rozniczka/7.PNG" %}" width="500" height="90">
-    <br><br>
-    i wzór przyjmuje prostszą postać:
-    <br><br>
-    <img src="{%  static "img/rozniczka/8.PNG" %}" width="500" height="90">
-    <br><br>
-    Zapiszemy wzór dla róznych wartości m i n: <br>
-    <br>
-    <b>1. Niech m = 1 , n = 2:</b><br><br>
-    <img src="{%  static "img/rozniczka/9.PNG" %}" width="550" height="190">
-    <br><br>
-    Dowód dla opisanych wyżej wzorów jest następujący: <br>
-    Niech: <br><br>
-    <img src="{%  static "img/rozniczka/10.PNG" %}" width="500" height="90">
-    <br><br>
-    gdzie:
-    <br><br>
-    <img src="{%  static "img/rozniczka/11.PNG" %}" width="500" height="90">
-    <br><br>
-    Wtedy pierwsze pochodne p20(x), p21(x), p22(x) w punkcie x = x0 mają postać:
-    <br><br>
-    <img src="{%  static "img/rozniczka/12.PNG" %}" width="500" height="180">
-    <br><br>
-    <b>2. Niech m = 2 , n = 2:</b><br><br>
-    <img src="{%  static "img/rozniczka/13.PNG" %}" width="500" height="140">
-    <br><br>
-    <b>3. Niech m = 1 , n = 3:</b><br><br>
-    <img src="{%  static "img/rozniczka/14.PNG" %}" width="500" height="140">
-    <br><br>
-    <b>4. Niech m = 2 , n = 3:</b><br><br>
-    <img src="{%  static "img/rozniczka/15.PNG" %}" width="500" height="90"><br><br>
-    <img src="{%  static "img/rozniczka/16.PNG" %}" width="500" height="130">
+</p>
+<p>
+    Różniczkowaniem numerycznym nazywamy wyznaczanie przybliżonych wartości pochodnych
+    funkcji dyskretnej jednej lub wielu zmiennych w zadanych punktach obszaru. Operację taką można
+    wykonać dwuetapowo:<br>
+    • wyprowadzając stosowne wzory różnicowe pozwalające na wyrażenie pożądanej pochodnej
+    w określonym punkcie obszaru jako kombinacji liniowej wartości funkcji w punktach są-
+    siednich – węzłach (tzw. schematy różnicowe),<br>
+    • stosując wyznaczone wzory różnicowe do obliczania pochodnych w wybranych punktach
+    obszaru.<br><br>
+    Postępowanie takie jest wyjątkowo skuteczne i efektywne w przypadku, gdy węzły są rozmieszczo-
+    ne równomiernie, gdyż wówczas wystarczy jednokrotne wyprowadzenie schematu różnicowego na
+    każdą niezbędną pochodną.
+    Metody generacji wzorów różnicowych możemy podzielić na trzy kategorie:<br>
+    • przez interpolację,<br>
+    • nieoznaczonych współczynników,<br>
+    • ścisłe dla wielomianów możliwie najwyższego stopnia,<br>
+    ponadto, w przypadku generowania wzorów różnicowych na pochodne rzędu wyższego niż pierw-
+    szy możemy zastosować metodę składania operatorów, pamiętając że druga pochodna to pierwsza
+    pochodna z pierwszej pochodnej, z kolei trzecia pochodna to druga pochodna z pierwszej pochod-
+    nej, lub pierwsza pochodna z drugiej pochodnej, itd.<br><br>
+    <img src="{%  static "img/rozniczka/17.PNG" %}">
 </p>
 <a href="#" class="scrollToTop">Do góry</a>
 

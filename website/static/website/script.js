@@ -72,9 +72,9 @@
 			questionCounter++;
 		}
 
-	// show score as "score/possible score"
 		var showScore = "Twój wynik: " + calcScore + "/" + questionCounter;
-	// if 4/4, "perfect score!"
+
+
 		if (calcScore === questionCounter) {
 			showScore = showScore + "&nbsp; <strong>Świetny wynik!</strong>"
 		};

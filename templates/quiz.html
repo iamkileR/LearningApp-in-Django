@@ -12,186 +12,187 @@
 <div class="container">
   <h2 class="quizHeader">Moduł Quizu</h2>
 
-	  	<div>
-	  		<p class="question">1. Zaznacz prawidłowy wzór interpolacyjny Newtona:</p><br>
+        <div>
+	  		<p class="question">1. Równanie x1 = a – (F(a)/F(b)-F(a))*(b-a) jest podstawą do rozwiązywania równań nieliniowych
+                                    metodą</p><br>
 
 	    	<ul>
-	    	<input class="answer" type="radio" name="q1" value="1">
-	        <label id="correctString1">
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>bisekcji</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">siecznych</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>stycznych (Newtona)</label>
+	        <br>
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>Rungego – Kutty rzędu IV</label>
+    		</ul>
+	  	</div>
+        <div>
+	  		<p class="question">2. Które ze zdań jest nieprawdziwe</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>W każdym przypadku obliczeń numerycznych mamy do czynienia ze skończonymi zbiorami wartości</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="1">
+	        <label id="correctString2">Obliczenia stałopozycyjne podlegają takim samym błędom jak zmiennopozycyjne</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Liczba binarna (o określonej liczbie bitów) nie umożliwia zapisu dowolnej wartości numerycznej</label>
+	        <br>
+	        <input class="answer" type="radio" name="q2" value="0">
+	        <label>Liczby z zakresu stałopozycyjnych zawsze są zbiorami skończonymi i przeliczalnymi</label>
+    		</ul>
+	  	</div>
+        <div>
+	  		<p class="question">3. Maksymalny rząd kwadratury interpolacyjnej wynosi</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>2n</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="1">
+	        <label id="correctString3">2(n+1)</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>n + 1</label>
+	        <br>
+	        <input class="answer" type="radio" name="q3" value="0">
+	        <label>n + 2</label>
+    		</ul>
+	  	</div>
+        <div>
+	  		<p class="question">4. Mietoda siecznych jest</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Metodą niestacjonarną jednopunktową</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="1">
+	        <label id="correctString4">Metodą stacjonarną dwupunktową</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Metodą niestacjonarną dwupunktową</label>
+	        <br>
+	        <input class="answer" type="radio" name="q4" value="0">
+	        <label>Metodą stacjonarną jednopunktową</label>
+    		</ul>
+	  	</div>
+        <div>
+	  		<p class="question">5. Bisekcja jest:</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>Metodą stacjonarną zbieżną lokalnie</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="1">
+	        <label id="correctString5">Metodą niestacjonarną zbieżną globalnie</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>Metodą stacjonarną zbieżną globalnie</label>
+	        <br>
+	        <input class="answer" type="radio" name="q5" value="0">
+	        <label>Metodą niestacjonarną zbieżną lokalnie</label>
+    		</ul>
+	  	</div>
+        <div>
+	  		<p class="question">6. Koszt wyliczenia wielomianu interpolacyjnego Newtona jest rzędu</p><br>
+
+	    	<ul>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>n log n</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="1">
+	        <label id="correctString6">n^2</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>n^3</label>
+	        <br>
+	        <input class="answer" type="radio" name="q6" value="0">
+	        <label>n</label>
+    		</ul>
+	  	</div>
+	  	<div>
+	  		<p class="question">7. Zaznacz prawidłowy wzór interpolacyjny Newtona:</p><br>
+
+	    	<ul>
+	    	<input class="answer" type="radio" name="q7" value="1">
+	        <label id="correctString7">
                 <img src="{%  static "img/interpolacja/6.PNG" %}">
                 <img src="{%  static "img/interpolacja/7.PNG" %}">
             </label>
 	    	<br>
-	        <input class="answer" type="radio" name="q1" value="0">
+	        <input class="answer" type="radio" name="q7" value="0">
 	        <label>
                 <img src="{%  static "img/interpolacja/2.PNG" %}">
                 <img src="{%  static "img/interpolacja/3.PNG" %}">
                 <img src="{%  static "img/interpolacja/4.PNG" %}">
             </label>
 	        <br>
-	        <input class="answer" type="radio" name="q1" value="0">
+	        <input class="answer" type="radio" name="q7" value="0">
 	        <label>
                 <img src="{%  static "img/calkowanie/17.PNG" %}">
             </label>
 	        <br>
-	        <input class="answer" type="radio" name="q1" value="0">
+	        <input class="answer" type="radio" name="q7" value="0">
 	        <label>
                 <img src="{%  static "img/calkowanie/10.PNG" %}">
             </label>
     		</ul>
 	  	</div>
 	  	<div>
-	  		<p class="question">2. Które metody uważane są jako dokładne?</p><br>
+	  		<p class="question">8. Które metody uważane są jako dokładne?</p><br>
 
 	    	<ul>
-	        <input class="answer" type="radio" name="q2" value="0">
+	        <input class="answer" type="radio" name="q8" value="0">
 	        <label>Metoda bisekcji, Metoda siecznych</label>
 	        <br>
-	        <input class="answer" type="radio" name="q2" value="1">
-	        <label id="correctString2">Metoda eliminacji Gaussa, Metoda Cramera</label>
+	        <input class="answer" type="radio" name="q8" value="1">
+	        <label id="correctString8">Metoda eliminacji Gaussa, Metoda Cramera</label>
 	        <br>
-	        <input class="answer" type="radio" name="q2" value="0">
+	        <input class="answer" type="radio" name="q8" value="0">
 	        <label>Metoda cięciw, Metoda stycznych (Newtona)</label>
 	        <br>
-	        <input class="answer" type="radio" name="q2" value="0">
+	        <input class="answer" type="radio" name="q8" value="0">
 	        <label>Metoda najmniejszych kwadratów</label>
 	    	</ul>
 	  	</div>
 	  	<div>
-	  		<p class="question">3. Które równanie może być przedstawione jako równanie algebraiczne?</p><br>
+	  		<p class="question">9. Które równanie może być przedstawione jako równanie algebraiczne?</p><br>
 
 	    	<ul>
-	        <input class="answer" type="radio" name="q3" value="0">
+	        <input class="answer" type="radio" name="q9" value="0">
 	        <label>n^3 = 4</label>
 	        <br>
-	        <input class="answer" type="radio" name="q3" value="1">
-	        <label id="correctString3">F(x) = f(x)</label>
+	        <input class="answer" type="radio" name="q9" value="1">
+	        <label id="correctString9">F(x) = f(x)</label>
 	        <br>
-	        <input class="answer" type="radio" name="q3" value="0">
+	        <input class="answer" type="radio" name="q9" value="0">
 	        <label>f(x) = { x1,x2, ..., xn }</label>
 	        <br>
-	        <input class="answer" type="radio" name="q3" value="0">
+	        <input class="answer" type="radio" name="q9" value="0">
 	        <label>x1 = b+a / 2</label>
 	    	</ul>
 		</div>
+
 	  	<div>
-	  		<p class="question">4. Które ze zdań jest nieprawdziwe</p><br>
+	  		<p class="question">10. Poprawnym zaokrągleniem do 3 cyfr dokładnych liczby 4,335 jest</p><br>
 
 	    	<ul>
-	        <input class="answer" type="radio" name="q4" value="0">
-	        <label>W każdym przypadku obliczeń numerycznych mamy do czynienia ze skończonymi zbiorami wartości</label>
-	        <br>
-	        <input class="answer" type="radio" name="q4" value="1">
-	        <label id="correctString4">Obliczenia stałopozycyjne podlegają takim samym błędom jak zmiennopozycyjne</label>
-	        <br>
-	        <input class="answer" type="radio" name="q4" value="0">
-	        <label>Liczba binarna (o określonej liczbie bitów) nie umożliwia zapisu dowolnej wartości numerycznej</label>
-	        <br>
-	        <input class="answer" type="radio" name="q4" value="0">
-	        <label>Liczby z zakresu stałopozycyjnych zawsze są zbiorami skończonymi i przeliczalnymi</label>
-    		</ul>
-	  	</div>
-	  	<div>
-	  		<p class="question">5. Równanie x1 = a – (F(a)/F(b)-F(a))*(b-a) jest podstawą do rozwiązywania równań nieliniowych
-                                    metodą</p><br>
-
-	    	<ul>
-	        <input class="answer" type="radio" name="q5" value="0">
-	        <label>bisekcji</label>
-	        <br>
-	        <input class="answer" type="radio" name="q5" value="1">
-	        <label id="correctString5">siecznych</label>
-	        <br>
-	        <input class="answer" type="radio" name="q5" value="0">
-	        <label>stycznych (Newtona)</label>
-	        <br>
-	        <input class="answer" type="radio" name="q5" value="0">
-	        <label>Rungego – Kutty rzędu IV</label>
-    		</ul>
-	  	</div>
-	  	<div>
-	  		<p class="question">6. Maksymalny rząd kwadratury interpolacyjnej wynosi</p><br>
-
-	    	<ul>
-	        <input class="answer" type="radio" name="q6" value="0">
-	        <label>2n</label>
-	        <br>
-	        <input class="answer" type="radio" name="q6" value="1">
-	        <label id="correctString6">2(n+1)</label>
-	        <br>
-	        <input class="answer" type="radio" name="q6" value="0">
-	        <label>n + 1</label>
-	        <br>
-	        <input class="answer" type="radio" name="q6" value="0">
-	        <label>n + 2</label>
-    		</ul>
-	  	</div>
-	  	<div>
-	  		<p class="question">7. Mietoda siecznych jest</p><br>
-
-	    	<ul>
-	        <input class="answer" type="radio" name="q7" value="0">
-	        <label>Metodą niestacjonarną jednopunktową</label>
-	        <br>
-	        <input class="answer" type="radio" name="q7" value="1">
-	        <label id="correctString7">Metodą stacjonarną dwupunktową</label>
-	        <br>
-	        <input class="answer" type="radio" name="q7" value="0">
-	        <label>Metodą niestacjonarną dwupunktową</label>
-	        <br>
-	        <input class="answer" type="radio" name="q7" value="0">
-	        <label>Metodą stacjonarną jednopunktową</label>
-    		</ul>
-	  	</div>
-	  	<div>
-	  		<p class="question">8. Poprawnym zaokrągleniem do 3 cyfr dokładnych liczby 4,335 jest</p><br>
-
-	    	<ul>
-	        <input class="answer" type="radio" name="q8" value="0">
+	        <input class="answer" type="radio" name="q10" value="0">
 	        <label>4.33</label>
 	        <br>
-	        <input class="answer" type="radio" name="q8" value="1">
-	        <label id="correctString8">4.34</label>
+	        <input class="answer" type="radio" name="q10" value="1">
+	        <label id="correctString10">4.34</label>
 	        <br>
-	        <input class="answer" type="radio" name="q8" value="0">
+	        <input class="answer" type="radio" name="q10" value="0">
 	        <label>4.35</label>
 	        <br>
-	        <input class="answer" type="radio" name="q8" value="0">
+	        <input class="answer" type="radio" name="q10" value="0">
 	        <label>4.3335</label>
-    		</ul>
-	  	</div>
-	  	<div>
-	  		<p class="question">9. Bisekcja jest:</p><br>
-
-	    	<ul>
-	        <input class="answer" type="radio" name="q9" value="0">
-	        <label>Metodą stacjonarną zbieżną lokalnie</label>
-	        <br>
-	        <input class="answer" type="radio" name="q9" value="1">
-	        <label id="correctString9">Metodą niestacjonarną zbieżną globalnie</label>
-	        <br>
-	        <input class="answer" type="radio" name="q9" value="0">
-	        <label>Metodą stacjonarną zbieżną globalnie</label>
-	        <br>
-	        <input class="answer" type="radio" name="q9" value="0">
-	        <label>Metodą niestacjonarną zbieżną lokalnie</label>
-    		</ul>
-	  	</div>
-	  	<div>
-	  		<p class="question">10. Koszt wyliczenia wielomianu interpolacyjnego Newtona jest rzędu</p><br>
-
-	    	<ul>
-	        <input class="answer" type="radio" name="q10" value="0">
-	        <label>n log n</label>
-	        <br>
-	        <input class="answer" type="radio" name="q10" value="1">
-	        <label id="correctString10">n^2</label>
-	        <br>
-	        <input class="answer" type="radio" name="q10" value="0">
-	        <label>n^3</label>
-	        <br>
-	        <input class="answer" type="radio" name="q10" value="0">
-	        <label>n</label>
     		</ul>
 	  	</div>
 
