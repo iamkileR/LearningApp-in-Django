@@ -75,11 +75,22 @@
 		var showScore = "Twój wynik: " + calcScore + "/" + questionCounter;
 
 
+
 		if (calcScore === questionCounter) {
 			showScore = showScore + "&nbsp; <strong>Świetny wynik!</strong>"
 		};
 		document.getElementById('userScore').innerHTML = showScore;
+
 	}
+	// zapis do pliku
+	function CreateTextFile() {
+
+			var humanScore = document.getElementById('userScore').innerHTML;
+            var blob = new Blob([humanScore], {
+            type: "text/plain;charset=utf-8",
+         	});
+        	 saveAs(blob, "download.txt");
+        }
 
 $(document).ready(function() {
 
@@ -88,3 +99,5 @@ $(document).ready(function() {
 	});
 
 });
+
+

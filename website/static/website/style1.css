@@ -98,6 +98,24 @@ input.quizSubmit[type="submit"]:hover {
 input.refresher{
 
   padding: 5px 25px;
+
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  text-transform:uppercase;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+  border: 1px solid #5E5E5E;
+}
+
+button.saver{
+  padding: 3px 20px;
   margin-left: 500px;
   border: 0;
   outline: 0;
