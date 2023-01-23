@@ -18,6 +18,7 @@ dj-database-url==1.2.0
 Django==4.0.3
 django-crispy-forms==1.14.0
 django-heroku==0.3.1
+django-on-heroku==1.1.2
 docopt==0.6.2
 entrypoints==0.4
 executing==0.8.3
@@ -75,6 +76,7 @@ platformdirs==2.5.2
 prompt-toolkit==3.0.28
 protobuf==3.19.6
 psycopg2==2.9.5
+psycopg2-binary==2.9.5
 pure-eval==0.2.2
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
